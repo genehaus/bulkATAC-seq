@@ -29,14 +29,14 @@ pip install --user RGT
 
 
 	3-1. to make output dir
+
 	
-		```
 		mkdir /xxx/7_nextflow_out
-		```
-		
+	
+	
 	3-2. to prepare the shell script to run nf-core/atacseq
-		
-		```	
+
+
 		#!/usr/XXX/bin/zsh
 		#SBATCH -J run_nf-core_atac
 		#SBATCH -t 100:00:00
@@ -52,7 +52,7 @@ pip install --user RGT
 	
 		cd $dir_fq
 		/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome mm10 --outdir '/xxx/7_nextflow_out'	
-		```	
+
 
 	Here, 'xxx' should be your full directory 
 
