@@ -27,18 +27,19 @@ pip install --user RGT
 
 3. Run nf-core/atacseq
 
+
 In Python 3 
 
 
-	3-1. to make output dir<br>
+	3-1. to make output dir
 	
 	
 		mkdir /xxx/7_nextflow_out
-	
-	
+		
+		
 	3-2. to prepare the shell script to run nf-core/atacseq
-
-	
+		
+			
 		#!/usr/XXX/bin/zsh
 		#SBATCH -J run_nf-core_atac
 		#SBATCH -t 100:00:00
