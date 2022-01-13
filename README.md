@@ -31,14 +31,15 @@ In Python 3
 
 
 	3-1. to make output dir
+
+
 	```
 	mkdir /xxx/7_nextflow_out
-	```
-	
-	
+	```	
 	
 	
 	3-2. to prepare the shell script to run nf-core/atacseq
+
 	
 	```
 	#!/usr/XXX/bin/zsh
@@ -55,8 +56,7 @@ In Python 3
 	
 	
 	cd $dir_fq
-	/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome GRCm38 --outdir '/xxx/7_nextflow_out'
-	
+	/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome GRCm38 --outdir '/xxx/7_nextflow_out'	
 	```
 	
 	Here, 'xxx' should be your full directory 
@@ -73,7 +73,6 @@ In Python 3
 	4-1. to download the genome data 
 	
 	```
-
 	# The directory "rgtdata" would be downloaded in your HOME when you install "RGT" (No.2)
 	cd ~/rgtdata
 	python setupGenomicData.py --mm10
