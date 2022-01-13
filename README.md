@@ -54,8 +54,11 @@ pip install --user RGT
 		/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome mm10 --outdir '/xxx/7_nextflow_out'	
 
 
-	Here, 'xxx' should be your full directory 
+	(1) Here, 'xxx' should be your full directory 
+	
+	(2) how to make "design.csv" 
 
+	https://nf-co.re/atacseq/1.2.1/usage#multiple-replicates
 
 
 
