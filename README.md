@@ -32,10 +32,8 @@ In Python 3
 
 	3-1. to make output dir
 
-
-	```
+	
 	mkdir /xxx/7_nextflow_out
-	```	
 	
 	
 	3-2. to prepare the shell script to run nf-core/atacseq
@@ -78,7 +76,6 @@ In Python 3
 	python setupGenomicData.py --mm10
 	
 	# you can check your genome name just by typing "python setupGenomicData.py"
-	
 	```
 
 
