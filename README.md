@@ -29,36 +29,37 @@ pip install --user RGT
 
 In Python 3
 
-3-1. to make output dir
-```
-mkdir /xxx/7_nextflow_out
-```
 
-
-
-
-3-2. to prepare the shell script to run nf-core/atacseq
-
-```
-#!/usr/XXX/bin/zsh
-#SBATCH -J run_nf-core_atac
-#SBATCH -t 100:00:00
-#SBATCH --ntasks-per-node=20
-#NXF_OPTS='-Xms1g -Xmx4g'
-#SBATCH --output=output.%J.txt
-
-source /xxx/anaconda3/bin/activate nf-core
-
-dir_fq=/xxx/bulk_ATAC/input/
-dir_csv=/xxx/bulk_ATAC/input/design.csv
-
-
-cd $dir_fq
-/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome GRCm38 --outdir '/xxx/7_nextflow_out'
-
-```
-
-xxx should be full directory 
+	3-1. to make output dir
+	```
+	mkdir /xxx/7_nextflow_out
+	```
+	
+	
+	
+	
+	3-2. to prepare the shell script to run nf-core/atacseq
+	
+	```
+	#!/usr/XXX/bin/zsh
+	#SBATCH -J run_nf-core_atac
+	#SBATCH -t 100:00:00
+	#SBATCH --ntasks-per-node=20
+	#NXF_OPTS='-Xms1g -Xmx4g'
+	#SBATCH --output=output.%J.txt
+	
+	source /xxx/anaconda3/bin/activate nf-core
+	
+	dir_fq=/xxx/bulk_ATAC/input/
+	dir_csv=/xxx/bulk_ATAC/input/design.csv
+	
+	
+	cd $dir_fq
+	/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome GRCm38 --outdir '/xxx/7_nextflow_out'
+	
+	```
+	
+	Here, 'xxx' should be your full directory 
 
 
 
@@ -156,18 +157,18 @@ xxx should be full directory
 	
 	
 	
-	5. Special thanks to 
+5. Special thanks to 
 	
-	http://www.costalab.org
+http://www.costalab.org
 	
 	
 	
-	**References & Good Q&A web source**
+**References & Good Q&A web source**
 
-	https://nf-co.re/atacseq/1.2.1<br>
-	http://www.regulatory-genomics.org/hint/introduction/<br>
-	https://www.biostars.org/p/13462/<br>
-	https://www.regulatory-genomics.org/hint/tutorial/<br>
+https://nf-co.re/atacseq/1.2.1<br>
+http://www.regulatory-genomics.org/hint/introduction/<br>
+https://www.biostars.org/p/13462/<br>
+https://www.regulatory-genomics.org/hint/tutorial/<br>
 	
 
 
