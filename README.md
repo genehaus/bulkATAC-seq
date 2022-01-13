@@ -54,7 +54,7 @@ In Python 3
 	
 	
 		cd $dir_fq
-		/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome GRCm38 --outdir '/xxx/7_nextflow_out'	
+		/xxx/nextflow run nf-core/atacseq --input $dir_csv --narrow_peak --genome mm10 --outdir '/xxx/7_nextflow_out'	
 	
 
 	Here, 'xxx' should be your full directory 
@@ -82,7 +82,7 @@ In Python 3
 
 
 
-	4-2. To change chromosome name 
+	4-2. To change chromosome name (optional)
 	
 	https://www.biostars.org/p/13462/
 		
@@ -122,7 +122,7 @@ In Python 3
 
 
 
-	4-3. To make index file for the ${filename}_chr.bam
+	4-3. To make index file for the ${filename}_chr.bam (optional, followed by step 4-2)
 	
 	in Python3
 	
@@ -147,8 +147,20 @@ In Python 3
 	
 	https://www.regulatory-genomics.org/hint/tutorial/
 	
+	```
+	#!/usr/local_rwth/bin/zsh
+	#SBATCH -J HINT
+	#SBATCH -t 100:00:00
+	#SBATCH --output=output.%J.txt
 	
-	
+	bam_dir="/xxx/7_nextflow_out/bwa/mergedLibrary"
+	cd ${bam_dir}
+	for file in *chr.bam
+	do
+        	filename=`echo $file | cut -d "_" -f 1`
+        	/xxx/.local/bin/rgt-hint footprinting --atac-seq --paired-end --organism=mm10 --output-location=$dir1/Footprints --output-prefix=${filename} ${filename}_R1.bam $peak_dir/${filename}_R1.mLb.clN_peaks.narrowPeak
+	done
+	```	
 	
 	
 	
