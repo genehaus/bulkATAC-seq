@@ -25,10 +25,7 @@ pip install --user RGT
 
 
 
-3. Run nf-core/atacseq
-
-
-In Python 3 
+3. Run nf-core/atacseq (Python 3) 
 
 
 	3-1. to make output dir
