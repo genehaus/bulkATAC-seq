@@ -165,13 +165,16 @@ pip install --user RGT
 	
 	
 	
-5. Special thanks to 
-	
-http://www.costalab.org
-	
-	
-	
-**References & Good Q&A web source**
+
+
+5. acknowledgement
+
+5-1.team
+
+http://www.costalab.org<br>
+https://www.medizin.rwth-aachen.de/cms/Medizin/Die-Fakultaet/Einrichtungen/~dgun/IZKF-Aachen/<br>
+
+5-2. website
 
 https://nf-co.re/atacseq/1.2.1<br>
 http://www.regulatory-genomics.org/hint/introduction/<br>
