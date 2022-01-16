@@ -1,4 +1,4 @@
-# bulk ATAC seq data analysis 
+# bulk ATAC seq data analysis by H.J.Kim
 
 <br>
 <br>
